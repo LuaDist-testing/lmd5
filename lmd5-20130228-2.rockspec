@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package="lmd5"
-version="20130228-1"
+version="20130228-2"
 
 -- LuaDist source
 source = {
-  tag = "20130228-1",
+  tag = "20130228-2",
   url = "git://github.com/LuaDist-testing/lmd5.git"
 }
 -- Original source
 -- source = {
---    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/5.1/lmd5.tar.gz",
+--    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/5.2/lmd5.tar.gz",
 --    dir = "md5"
 -- }
 
@@ -25,7 +25,7 @@ description = {
 }
 
 dependencies = {
-   "lua ~> 5.1"
+  "lua >= 5.2, < 5.4",
 }
 
 external_dependencies = {

@@ -1,4 +1,4 @@
-This is a message digest library for Lua 5.1. It is based on the digest routines
+This is a message digest library for Lua 5.2. It is based on the digest routines
 provided by OpenSSL. The library can be built to compute the following digests:
 md2, md4, md5, sha1, sha224, sha256, sha384, sha512, ripemd160, mdc2.
 For more information on these digests, see

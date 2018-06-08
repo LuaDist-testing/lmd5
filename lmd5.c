@@ -2,7 +2,7 @@
 * lmd5.c
 * MD5 library for Lua 5.1 based on Rivest's API
 * Luiz Henrique de Figueiredo <lhf@tecgraf.puc-rio.br>
-* 28 Feb 2013 21:10:02
+* 28 Feb 2013 21:15:09
 * This code is hereby placed in the public domain.
 */
 
@@ -25,8 +25,7 @@ static MD5_CTX *Pget(lua_State *L, int i)
 static MD5_CTX *Pnew(lua_State *L)
 {
  MD5_CTX *c=lua_newuserdata(L,sizeof(MD5_CTX));
- luaL_getmetatable(L,MYTYPE);
- lua_setmetatable(L,-2);
+ luaL_setmetatable(L,MYTYPE);
  return c;
 }
 
@@ -121,8 +120,7 @@ static const luaL_Reg R[] =
 LUALIB_API int luaopen_md5(lua_State *L)
 {
  luaL_newmetatable(L,MYTYPE);
- lua_setglobal(L,MYNAME);
- luaL_register(L,MYNAME,R);
+ luaL_setfuncs(L,R,0);
  lua_pushliteral(L,"version");			/** version */
  lua_pushliteral(L,MYVERSION);
  lua_settable(L,-3);
